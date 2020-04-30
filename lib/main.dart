@@ -1,3 +1,4 @@
+import 'package:asclepio_paciente_flutter/pages/register.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -20,13 +21,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Empezamos"),
-        ),
-        body: Center(child: Text("Empezamos")
-        ),
-      ),
+      home: SafeArea(top: true, bottom: true, child: Register(),)
     );
   }
 }
