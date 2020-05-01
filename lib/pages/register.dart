@@ -55,8 +55,7 @@ class RegisterButton extends StatelessWidget {
       child: Center(
         child: Text(
           "Registrar",
-          style: TextStyle(
-              color: kWhiteColor, fontWeight: FontWeight.bold, fontSize: 20),
+          style: TextStyle( color: kWhiteColor, fontWeight: FontWeight.bold, fontSize: 20),
         ),
       ),
     );

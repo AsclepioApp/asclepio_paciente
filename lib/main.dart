@@ -1,3 +1,4 @@
+import 'package:asclepio_paciente_flutter/pages/profile.dart';
 import 'package:asclepio_paciente_flutter/pages/register.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: SafeArea(top: true, bottom: true, child: Register(),)
+      home: SafeArea(top: true, bottom: true, child: Profile(),)
     );
   }
 }

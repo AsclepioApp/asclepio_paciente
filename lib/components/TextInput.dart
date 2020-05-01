@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:asclepio_paciente_flutter/utilities/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -21,9 +20,6 @@ class TextInput extends StatelessWidget {
   }
 }
 
-// ,
-//         decoration: BoxDecoration(
-//             border: Border.all(color: Colors.grey[100]))
 
 class RoundedInput extends StatelessWidget {
   RoundedInput({@required this.labelText});
