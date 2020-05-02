@@ -1,3 +1,6 @@
+import 'package:asclepio_paciente_flutter/components/CustomWhiteBox.dart';
+import 'package:asclepio_paciente_flutter/components/RegisterButton.dart';
+import 'package:asclepio_paciente_flutter/components/RegisterFormTitle.dart';
 import 'package:asclepio_paciente_flutter/components/TextInput.dart';
 import 'package:asclepio_paciente_flutter/utilities/constants.dart';
 import 'package:flutter/material.dart';
@@ -40,52 +43,6 @@ class _RegisterState extends State<Register> {
   }
 }
 
-class RegisterButton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      width: 340,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          gradient: LinearGradient(colors: [
-            kMainGreenColor.withOpacity(1),
-            kMainGreenColor.withOpacity(.6)
-          ])),
-      child: Center(
-        child: Text(
-          "Registrar",
-          style: TextStyle( color: kWhiteColor, fontWeight: FontWeight.bold, fontSize: 20),
-        ),
-      ),
-    );
-  }
-}
-
-class RegisterFormTitle extends StatelessWidget {
-  final headerStyle =
-      TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.w800);
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Text(
-            "Registrate",
-            style: headerStyle,
-          ),
-          Text(
-            "X",
-            style: headerStyle,
-          ),
-        ],
-      ),
-    );
-  }
-}
-
 class RegisterForm extends StatelessWidget {
   RegisterForm({@required GlobalKey<_RegisterState> this.formKey});
   final formKey;
@@ -96,115 +53,31 @@ class RegisterForm extends StatelessWidget {
         key: this.formKey,
         child: Padding(
           padding: EdgeInsets.all(25),
-          child: Container(
-              decoration: BoxDecoration(
-                  color: kWhiteColor,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                        color: kMainGreenColor.withOpacity(.1),
-                        blurRadius: 20.0,
-                        offset: Offset(0, 10))
-                  ]),
-              child: Padding(
-                padding: EdgeInsets.all(30.0),
-                child: Column(
-                  children: <Widget>[
-                    RoundedInput(
-                      labelText: "Cedula",
-                    ),
-                    RoundedInput(
-                      labelText: "Nombre",
-                    ),
-                    RoundedInput(
-                      labelText: "Apellido",
-                    ),
-                    RoundedInput(
-                      labelText: "Numero Telefónico",
-                    ),
-                    RoundedInput(
-                      labelText: "Dirección",
-                    ),
-                  ],
-                ),
-              )),
+          child: CustomWhiteBox(
+            child: Padding(
+              padding: EdgeInsets.all(30.0),
+              child: Column(
+                children: <Widget>[
+                  RoundedInput(
+                    labelText: "Cedula",
+                  ),
+                  RoundedInput(
+                    labelText: "Nombre",
+                  ),
+                  RoundedInput(
+                    labelText: "Apellido",
+                  ),
+                  RoundedInput(
+                    labelText: "Numero Telefónico",
+                  ),
+                  RoundedInput(
+                    labelText: "Dirección",
+                  ),
+                ],
+              ),
+            ),
+          ),
         ));
-    //Padding(
-    //   padding: EdgeInsets.all(30.0),
-    //   child: Column(
-    //     children: <Widget>[
-    //       Container(
-    //         padding: EdgeInsets.all(5),
-    //         decoration: BoxDecoration(
-    //             color: kWhiteColor,
-    //             borderRadius: BorderRadius.circular(10),
-    //             boxShadow: [
-    //               BoxShadow(
-    //                   color: kMainGreenColor.withOpacity(.1),
-    //                   blurRadius: 20.0,
-    //                   offset: Offset(0, 10))
-    //             ]),
-    //         child: Column(
-    //           children: <Widget>[
-    //             Container(
-    //                 padding: EdgeInsets.all(8.0),
-    //                 decoration: BoxDecoration(
-    //                     border: Border(
-    //                         bottom: BorderSide(color: Colors.grey[100]))),
-    //                 child: TextInput(labelText: "Cedula")),
-    //             Container(
-    //                 padding: EdgeInsets.all(8.0),
-    //                 decoration: BoxDecoration(
-    //                     border: Border(
-    //                         bottom: BorderSide(color: Colors.grey[100]))),
-    //                 child: TextInput(
-    //                   labelText: "Nombre",
-    //                 )),
-    //             Container(
-    //                 padding: EdgeInsets.all(8.0),
-    //                 decoration: BoxDecoration(
-    //                     border: Border(
-    //                         bottom: BorderSide(color: Colors.grey[100]))),
-    //                 child: TextInput(labelText: "Apellido")),
-    //             Container(
-    //               padding: EdgeInsets.all(8.0),
-    //               decoration: BoxDecoration(
-    //                   border:
-    //                       Border(bottom: BorderSide(color: Colors.grey[100]))),
-    //               child: TextInput(labelText: "Numero"),
-    //             ),
-    //             Container(
-    //               padding: EdgeInsets.all(8.0),
-    //               decoration: BoxDecoration(
-    //                   border:
-    //                       Border(bottom: BorderSide(color: Colors.grey[100]))),
-    //               child: TextInput(labelText: "Lo otro"),
-    //             ),
-    //           ],
-    //         ),
-    //       ),
-    //       SizedBox(
-    //         height: 40,
-    //       ),
-    //       Container(
-    //         height: 50,
-    //         decoration: BoxDecoration(
-    //             borderRadius: BorderRadius.circular(10),
-    //             gradient: LinearGradient(colors: [
-    //               kMainGreenColor.withOpacity(1),
-    //               kMainGreenColor.withOpacity(.6)
-    //             ])),
-    //         child: Center(
-    //           child: Text(
-    //             "Login",
-    //             style:
-    //                 TextStyle(color: kWhiteColor, fontWeight: FontWeight.bold),
-    //           ),
-    //         ),
-    //       ),
-    //     ],
-    //   ),
-    // );
   }
 }
 
