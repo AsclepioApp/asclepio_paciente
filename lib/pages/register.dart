@@ -44,7 +44,7 @@ class _RegisterState extends State<Register> {
 }
 
 class RegisterForm extends StatelessWidget {
-  RegisterForm({@required GlobalKey<_RegisterState> this.formKey});
+  RegisterForm({@required this.formKey});
   final formKey;
 
   @override
