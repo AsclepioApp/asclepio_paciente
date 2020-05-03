@@ -15,7 +15,7 @@ class ChatLobbyState extends State<ChatLobby> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-          // title: Text("Chat Lobby"),
+           title: Text("Chat Lobby"),
           ),
       body:  Container(
         child: Column(
@@ -61,15 +61,22 @@ class ChatLobbyState extends State<ChatLobby> {
             ),
             Expanded(
               flex: 12,
-              child: Column(
-                children: <Widget>[
-                  ChatRow(),
-                  ChatRow(),
-                  ChatRow(),
-                  ChatRow(),
-                  // Expanded(child: ,),
-                ],
-              ),
+              child: ListView.separated(
+                separatorBuilder: (BuildContext context, int index) => const Divider(),
+                itemCount: 30,
+                itemBuilder: (context,i){
+                  return ChatRow();
+              })  
+              
+              // Column(
+              //   children: <Widget>[
+              //     ChatRow(),
+              //     ChatRow(),
+              //     ChatRow(),
+              //     ChatRow(),
+              //     // Expanded(child: ,),
+              //   ],
+              // ),
             )
           ],
         ),
