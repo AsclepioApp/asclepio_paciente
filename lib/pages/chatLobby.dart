@@ -45,7 +45,7 @@ class ChatLobbyState extends State<ChatLobby> {
                       child: TextField(
                           decoration: InputDecoration(
                             contentPadding: const EdgeInsets.symmetric(vertical: 0),
-                        hintText: "klk",
+                        hintText: "Buscar",
                         border: new OutlineInputBorder(
                           borderRadius: const BorderRadius.all(
                             const Radius.circular(15.0),
