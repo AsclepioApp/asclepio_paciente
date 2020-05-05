@@ -1,3 +1,4 @@
+import 'package:asclepio_paciente_flutter/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -17,7 +18,7 @@ class RegisterFormTitle extends StatelessWidget {
           ),
           InkWell(
             onTap: (){
-              Navigator.pushNamed(context, "/");
+              Navigator.pushNamed(context, Login.routeName);
             },
             child:Text(
             "X",
