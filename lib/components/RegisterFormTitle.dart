@@ -18,7 +18,7 @@ class RegisterFormTitle extends StatelessWidget {
           ),
           InkWell(
             onTap: (){
-              Navigator.pushNamed(context, Login.routeName);
+              Navigator.pushReplacementNamed(context, Login.routeName);
             },
             child:Text(
             "X",

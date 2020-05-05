@@ -19,16 +19,16 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: SafeArea(top: true, bottom: true, child: ChatLobby(),),
-      initialRoute: '/login',
+      initialRoute:  Login.routeName,
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
-        '/': (context) => SafeAreaViewer(child: AppTabController(),),
+        // '/': (context) => SafeAreaViewer(child: AppTabController(),),
         // When navigating to the "/second" route, build the SecondScreen widget.
-        '/home': (context) => SafeAreaViewer(child: Home(),),
-        '/chat-lobby': (context) => SafeAreaViewer(child: ChatLobby(),),
-        '/register': (context) => SafeAreaViewer(child: Register(),),
-        '/login': (context) => SafeAreaViewer(child: Login(),),
-        '/profile': (context) => SafeAreaViewer(child: Profile(),),
+        AppTabController.routeName: (context) => SafeAreaViewer(child: AppTabController(),),
+        // '/chat-lobby': (context) => SafeAreaViewer(child: ChatLobby(),),
+        Register.routeName: (context) => SafeAreaViewer(child: Register(),),
+        Login.routeName: (context) => SafeAreaViewer(child: Login(),),
+        // '/profile': (context) => SafeAreaViewer(child: Profile(),),
       },
     );
   }

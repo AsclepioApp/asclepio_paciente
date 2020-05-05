@@ -1,3 +1,4 @@
+import 'package:asclepio_paciente_flutter/pages/appTabController.dart';
 import 'package:asclepio_paciente_flutter/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -65,6 +66,7 @@ class LoginForm extends StatelessWidget {
                         ),
                         onPressed: () {
                           print("Ingresar");
+                           Navigator.of(context).pushReplacementNamed(AppTabController.routeName);
                         },
                       ),
                     ),

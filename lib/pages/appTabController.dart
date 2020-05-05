@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 
 class AppTabController extends StatefulWidget {
+
+  static const routeName = "home";
   @override
   State<StatefulWidget> createState() {
     return AppTabControllerState();
