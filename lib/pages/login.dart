@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class Login extends StatefulWidget {
+
+  static const routeName = "/login";
   @override
   State<StatefulWidget> createState() {
     return LoginState();

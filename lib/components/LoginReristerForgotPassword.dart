@@ -1,3 +1,4 @@
+import 'package:asclepio_paciente_flutter/pages/register.dart';
 import 'package:flutter/material.dart';
 
 class LoginReristerForgotPassword extends StatelessWidget {
@@ -29,7 +30,8 @@ class LoginReristerForgotPassword extends StatelessWidget {
             ),
           ),
           onTap: () {
-            Navigator.pushNamed(context, "/register");
+            Navigator.of(context).pushReplacementNamed(Register.routeName);
+
             print("registrate");
           },
         ),

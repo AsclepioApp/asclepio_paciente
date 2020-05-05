@@ -28,7 +28,7 @@ class ChatRow extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text(
-                            "Manuel Vladimir Oleaga Begaso",
+                            "Doctor Manuel Begaso",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 15),
                           ),

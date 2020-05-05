@@ -16,9 +16,10 @@ class ChatLobbyState extends State<ChatLobby> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-           title: Text("Chat Lobby"),
-          ),
-      body:  Container(
+        title: Text("Chat Lobby"),
+        backgroundColor: mainPurpleColor,
+      ),
+      body: Container(
         child: Column(
           children: <Widget>[
             Expanded(
@@ -44,7 +45,7 @@ class ChatLobbyState extends State<ChatLobby> {
                       height: 30,
                       child: TextField(
                           decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.symmetric(vertical: 0),
+                        contentPadding: const EdgeInsets.symmetric(vertical: 0),
                         hintText: "Buscar",
                         border: new OutlineInputBorder(
                           borderRadius: const BorderRadius.all(
@@ -59,18 +60,17 @@ class ChatLobbyState extends State<ChatLobby> {
               ),
             ),
             Expanded(
-              flex: 12,
-              child: ListView.separated(
-                separatorBuilder: (BuildContext context, int index) => const Divider(),
-                itemCount: 30,
-                itemBuilder: (context,i){
-                  return ChatRow();
-              })  
-            )
+                flex: 11,
+                child: ListView.separated(
+                    separatorBuilder: (BuildContext context, int index) =>
+                        const Divider(),
+                    itemCount: 30,
+                    itemBuilder: (context, i) {
+                      return ChatRow();
+                    }))
           ],
         ),
       ),
     );
   }
 }
-
