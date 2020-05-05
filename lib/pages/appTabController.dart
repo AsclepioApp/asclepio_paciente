@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 
 class AppTabController extends StatefulWidget {
-
   static const routeName = "home";
   @override
   State<StatefulWidget> createState() {
@@ -21,11 +20,8 @@ class AppTabControllerState extends State<AppTabController> {
       _currentIndex = index;
     });
   }
-  final List<Widget> _children = [
-    ChatLobby(),
-    Home(),
-    Profile()
-  ];
+
+  final List<Widget> _children = [ChatLobby(), Home(), Profile()];
 
   @override
   Widget build(BuildContext context) {
@@ -36,9 +32,12 @@ class AppTabControllerState extends State<AppTabController> {
           onTap: onTabTapped,
           currentIndex: _currentIndex,
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.chat), title: Text("Chat")),
-            BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("Home")),
-            BottomNavigationBarItem(icon: Icon(Icons.account_circle), title: Text("Profile")),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.chat), title: Text("Chat")),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home), title: Text("Home")),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.account_circle), title: Text("Profile")),
           ],
         ));
   }

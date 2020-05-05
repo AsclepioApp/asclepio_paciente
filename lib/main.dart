@@ -1,16 +1,11 @@
 import 'package:asclepio_paciente_flutter/pages/appTabController.dart';
-import 'package:asclepio_paciente_flutter/pages/chatLobby.dart';
-import 'package:asclepio_paciente_flutter/pages/home.dart';
 import 'package:asclepio_paciente_flutter/pages/login.dart';
-import 'package:asclepio_paciente_flutter/pages/profile.dart';
 import 'package:asclepio_paciente_flutter/pages/register.dart';
-import 'package:asclepio_paciente_flutter/router/router.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,17 +13,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: SafeArea(top: true, bottom: true, child: ChatLobby(),),
       initialRoute:  Login.routeName,
       routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
-        // '/': (context) => SafeAreaViewer(child: AppTabController(),),
-        // When navigating to the "/second" route, build the SecondScreen widget.
         AppTabController.routeName: (context) => SafeAreaViewer(child: AppTabController(),),
-        // '/chat-lobby': (context) => SafeAreaViewer(child: ChatLobby(),),
         Register.routeName: (context) => SafeAreaViewer(child: Register(),),
         Login.routeName: (context) => SafeAreaViewer(child: Login(),),
-        // '/profile': (context) => SafeAreaViewer(child: Profile(),),
       },
     );
   }
