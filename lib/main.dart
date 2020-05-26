@@ -1,4 +1,5 @@
 import 'package:asclepio_paciente_flutter/pages/appTabController.dart';
+import 'package:asclepio_paciente_flutter/pages/chatDetail.dart';
 import 'package:asclepio_paciente_flutter/pages/login.dart';
 import 'package:asclepio_paciente_flutter/pages/register.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         AppTabController.routeName: (context) => SafeAreaViewer(child: AppTabController(),),
         Register.routeName: (context) => SafeAreaViewer(child: Register(),),
         Login.routeName: (context) => SafeAreaViewer(child: Login(),),
+        ChatDetail.routeName: (context) => SafeAreaViewer(child: ChatDetail(),),
       },
     );
   }
