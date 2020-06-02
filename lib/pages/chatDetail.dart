@@ -1,5 +1,10 @@
+import 'dart:math';
+
+import 'package:asclepio_paciente_flutter/components/ChatTextInput.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../ChatMessage.dart';
 
 class ChatDetail extends StatelessWidget {
   static const routeName = "/chat-detail";
@@ -12,51 +17,28 @@ class ChatDetail extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.more_vert),
-            onPressed: () {
-            },
+            onPressed: () {},
           )
         ],
       ),
       body: Container(
         // color: Colors.red,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          // verticalDirection: VerticalDirection.up,
           children: <Widget>[
             Expanded(
-              flex: 4,
-              child: Container(
-                child: Center(
-                  child: Text("Here will be the messages"),
-                ),
-              ),
+              flex: 9,
+              child: ListView.builder(
+                  itemCount: 2,
+                  itemBuilder: (context, int) {
+                    // var ndg = new Random();
+                    // ndg.nextInt(2)
+                    //Pass Message and author comparator to align the message to left of right
+                    return ChatMessage();
+                  }),
             ),
-            Expanded(
-              flex: 1,
-              child: Row(
-                children: <Widget>[
-                  // IconButton(
-                  //   onPressed: () {
-                  //     print("object");
-                  //   },
-                  //   icon: Icon(Icons.add),
-                  //   // padding: EdgeInsets.all(5),
-                  // ),
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      // width: 200,
-                      child: Padding(
-                        padding: EdgeInsets.all(20.0),
-                        child: TextField(
-                          decoration:
-                              InputDecoration(border: OutlineInputBorder()),
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
+            Expanded(flex: 1, child: ChatTextInput()),
           ],
         ),
       ),
