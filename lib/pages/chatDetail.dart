@@ -2,25 +2,63 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ChatDetail extends StatelessWidget {
-
-  static const routeName ="/chat-detail";
+  static const routeName = "/chat-detail";
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text("Chat Detail"),
+        title: Text("Doctor Manuel begaso"),
         actions: <Widget>[
-           IconButton(icon:Icon(Icons.more_vert),onPressed: (){
-             print("mierda");
-           },)
+          IconButton(
+            icon: Icon(Icons.more_vert),
+            onPressed: () {
+            },
+          )
         ],
       ),
       body: Container(
-        child: Column(children: <Widget>[
-            
-        ],),
+        // color: Colors.red,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            Expanded(
+              flex: 4,
+              child: Container(
+                child: Center(
+                  child: Text("Here will be the messages"),
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Row(
+                children: <Widget>[
+                  // IconButton(
+                  //   onPressed: () {
+                  //     print("object");
+                  //   },
+                  //   icon: Icon(Icons.add),
+                  //   // padding: EdgeInsets.all(5),
+                  // ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      // width: 200,
+                      child: Padding(
+                        padding: EdgeInsets.all(20.0),
+                        child: TextField(
+                          decoration:
+                              InputDecoration(border: OutlineInputBorder()),
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
